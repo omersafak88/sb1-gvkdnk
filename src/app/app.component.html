@@ -1,0 +1,13 @@
+<TabView androidTabsPosition="bottom">
+  <StackLayout *tabItem="{title: 'Günlük Giriş'}">
+    <page-router-outlet name="entryTab"></page-router-outlet>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Günlük Görüntüleme'}">
+    <page-router-outlet name="viewTab"></page-router-outlet>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Çıktı Al'}">
+    <page-router-outlet name="exportTab"></page-router-outlet>
+  </StackLayout>
+</TabView>

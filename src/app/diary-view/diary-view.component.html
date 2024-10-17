@@ -1,0 +1,17 @@
+<StackLayout class="p-4">
+  <SearchBar [(ngModel)]="searchText" (submit)="onSearch()" hint="Ara..." class="m-b-10"></SearchBar>
+  <ListView [items]="entries" class="list-group">
+    <ng-template let-entry="item">
+      <StackLayout class="list-group-item">
+        <Label [text]="entry.date | date:'yyyy-MM-dd'" class="h3"></Label>
+        <Label [text]="entry.content" textWrap="true" class="p-y-10"></Label>
+        <Label [text]="'Oluşturma: ' + (entry.createdAt | date:'short')" class="text-muted"></Label>
+        <Label [text]="'Güncelleme: ' + (entry.updatedAt | date:'short')" class="text-muted"></Label>
+        <StackLayout orientation="horizontal" class="m-t-10">
+          <Button text="Düzenle" (tap)="onEdit(entry)" class="btn btn-primary m-r-10"></Button>
+          <Button text="Sil" (tap)="onDelete(entry)" class="btn btn-outline"></Button>
+        </StackLayout>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>

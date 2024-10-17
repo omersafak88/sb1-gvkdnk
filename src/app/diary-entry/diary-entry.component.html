@@ -1,0 +1,8 @@
+<ScrollView>
+  <StackLayout class="p-4">
+    <DatePicker [(ngModel)]="date"></DatePicker>
+    <TextView hint="Günlüğünüzü buraya yazın..." [(ngModel)]="content" editable="true" class="input input-border p-2 h-32"></TextView>
+    <Button text="Fotoğraf Ekle" (tap)="onImageTap()" class="btn btn-primary m-t-10"></Button>
+    <Button text="Kaydet" (tap)="onSave()" class="btn btn-primary m-t-10"></Button>
+  </StackLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<StackLayout class="p-4">
+  <Label text="Başlangıç Tarihi" class="h3"></Label>
+  <DatePicker [(ngModel)]="startDate"></DatePicker>
+  <Label text="Bitiş Tarihi" class="h3 m-t-10"></Label>
+  <DatePicker [(ngModel)]="endDate"></DatePicker>
+  <Button text="Çıktı Al" (tap)="onExport()" class="btn btn-primary m-t-20"></Button>
+</StackLayout>
